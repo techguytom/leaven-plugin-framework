@@ -21,14 +21,14 @@ class PostType
      *
      * @var array
      */
-    private $_labels;
+    private $labels;
 
     /**
      * Options
      *
      * @var array
      */
-    private $_options;
+    private $options;
 
     /**
      * SetLabels
@@ -40,7 +40,7 @@ class PostType
      */
     public function setLabels($value)
     {
-        $this->_labels = $value;
+        $this->labels = $value;
     }
 
     /**
@@ -51,7 +51,7 @@ class PostType
      */
     public function setOptions($value)
     {
-        $this->_options = $value;
+        $this->options = $value;
     }
 
     /**
@@ -64,7 +64,7 @@ class PostType
      */
     public function registerPostType($slug)
     {
-        $args = array_merge($this->_labels, $this->_options);
+        $args = array_merge($this->labels, $this->options);
         $postType = register_post_type($slug, $args);
 
         return $postType;

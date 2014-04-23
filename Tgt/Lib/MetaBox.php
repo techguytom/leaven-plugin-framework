@@ -21,70 +21,70 @@ class MetaBox
      *
      * @var int
      */
-    private $_id;
+    private $id;
 
     /**
      * Title
      *
      * @var string
      */
-    private $_title;
+    private $title;
 
     /**
      * Callback
      *
      * @var string
      */
-    private $_callback;
+    private $callback;
 
     /**
      * PostType
      *
      * @var string
      */
-    private $_postType;
+    private $postType;
 
     /**
      * Context
      *
      * @var string
      */
-    private $_context;
+    private $context;
 
     /**
      * Priority
      *
      * @var string
      */
-    private $_priority;
+    private $priority;
 
     /**
      * Callback Arguments
      *
      * @var array
      */
-    private $_callbackArguments;
+    private $callbackArguments;
 
     /**
      * Fields
      *
      * @var array
      */
-    private $_fields;
+    private $fields;
 
     /**
      * Nonce Name
      *
      * @var string
      */
-    private $_nonceName;
+    private $nonceName;
 
     /**
      * Array Data Pointer
      *
      * @var int
      */
-    private $_arrayDataPointer;
+    private $arrayDataPointer;
 
     /**
      * Constructer
@@ -106,7 +106,7 @@ class MetaBox
      */
     public function setId($id)
     {
-        $this->_id = $id;
+        $this->id = $id;
     }
 
     /**
@@ -117,7 +117,7 @@ class MetaBox
      */
     public function setTitle($title)
     {
-        $this->_title = $title;
+        $this->title = $title;
     }
 
     /**
@@ -129,7 +129,7 @@ class MetaBox
      */
     public function setCallback($callback)
     {
-        $this->_callback = $callback;
+        $this->callback = $callback;
     }
 
     /**
@@ -140,7 +140,7 @@ class MetaBox
      */
     public function setPostType($postType)
     {
-        $this->_postType = $postType;
+        $this->postType = $postType;
     }
 
     /**
@@ -151,7 +151,7 @@ class MetaBox
      */
     public function setContext($context)
     {
-        $this->_context = $context;
+        $this->context = $context;
     }
 
     /**
@@ -162,7 +162,7 @@ class MetaBox
      */
     public function setPriority($priority)
     {
-        $this->_priority = $priority;
+        $this->priority = $priority;
     }
 
     /**
@@ -174,7 +174,7 @@ class MetaBox
      */
     public function setCallbackArguments($callbackArguments)
     {
-        $this->_callbackArguments = $callbackArguments;
+        $this->callbackArguments = $callbackArguments;
     }
 
     /**
@@ -192,7 +192,7 @@ class MetaBox
             $fields = (array) $fields;
         }
 
-        $this->_fields = $fields;
+        $this->fields = $fields;
 
         $this->saveMetaFields();
     }
@@ -208,7 +208,7 @@ class MetaBox
      */
     public function setNonceName($nonceName)
     {
-        $this->_nonceName = $nonceName;
+        $this->nonceName = $nonceName;
 
         $this->saveMetaFields();
     }
@@ -236,13 +236,13 @@ class MetaBox
     public function createMetaBox()
     {
         add_meta_box(
-            $this->_id,
-            $this->_title,
-            $this->_callback,
-            $this->_postType,
-            $this->_context,
-            $this->_priority,
-            $this->_callbackArguments
+            $this->id,
+            $this->title,
+            $this->callback,
+            $this->postType,
+            $this->context,
+            $this->priority,
+            $this->callbackArguments
         );
 
     }
@@ -259,20 +259,20 @@ class MetaBox
     {
         $savedFields = maybe_unserialize(get_option('nerderyMetaFields'));
 
-        if (isset($this->_fields) && isset($this->_nonceName)) {
+        if (isset($this->fields) && isset($this->nonceName)) {
             if ($savedFields) {
                 for ($x = 0; $x < count($savedFields); $x++) {
-                    if ($this->_postType === $savedFields[$x]['postType']) {
-                        $savedFields[$x]['fields']    = $this->_fields;
-                        $savedFields[$x]['nonceName'] = $this->_nonceName;
+                    if ($this->postType === $savedFields[$x]['postType']) {
+                        $savedFields[$x]['fields']    = $this->fields;
+                        $savedFields[$x]['nonceName'] = $this->nonceName;
                     }
                 }
             } else {
                 $savedFields = array(
                     array(
-                        'postType'  => $this->_postType,
-                        'fields'    => $this->_fields,
-                        'nonceName' => $this->_nonceName,
+                        'postType'  => $this->postType,
+                        'fields'    => $this->fields,
+                        'nonceName' => $this->nonceName,
                     ),
                 );
 
@@ -298,7 +298,7 @@ class MetaBox
         if ($metaFields) {
             for ($x = 0; $x < count($metaFields); $x++) {
                 if ($postType === $metaFields[$x]['postType']) {
-                    $this->_arrayDataPointer = $x;
+                    $this->arrayDataPointer = $x;
                     return $metaFields;
                 }
             }
@@ -339,16 +339,16 @@ class MetaBox
      */
     public function saveMetaData($postId, $post)
     {
-        $metaFields = $this->getMetaFields($_POST['post_type']);
+        $metaFields = $this->getMetaFields($POST['post_type']);
 
         if (!$metaFields) {
             return $postId;
         }
 
-        if (!isset($_POST[$metaFields[$this->_arrayDataPointer]['nonceName']])
+        if (!isset($POST[$metaFields[$this->arrayDataPointer]['nonceName']])
             && !wp_verify_nonce(
-                $_POST[$metaFields[$this->_arrayDataPointer]['nonceName']],
-                $metaFields[$this->_arrayDataPointer]['nonceName']
+                $POST[$metaFields[$this->arrayDataPointer]['nonceName']],
+                $metaFields[$this->arrayDataPointer]['nonceName']
             )
         ) {
             return $postId;
@@ -358,7 +358,7 @@ class MetaBox
             return $postId;
         }
 
-        if ($metaFields[$this->_arrayDataPointer]['postType'] == $_POST['post_type']) {
+        if ($metaFields[$this->arrayDataPointer]['postType'] == $POST['post_type']) {
             if (!current_user_can('edit_post', $postId)
                 || !current_user_can('edit_page', $postId)
             ) {
@@ -366,8 +366,8 @@ class MetaBox
                 }
         }
 
-        foreach ($metaFields[$this->_arrayDataPointer]['fields'] as $field) {
-            $input = sanitize_text_field($_POST[$field]);
+        foreach ($metaFields[$this->arrayDataPointer]['fields'] as $field) {
+            $input = sanitize_text_field($POST[$field]);
             update_post_meta($postId, 'nerdery-' . $field, $input);
 
         }

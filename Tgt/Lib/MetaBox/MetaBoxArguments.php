@@ -10,9 +10,9 @@ namespace Nerdery\Lib\MetaBox;
 /**
  * Meta Box Arguments
  *
- * @package WordPress
- * @author Tom Jenkins <tom@tgtdesign.com>
- * @version 1.0
+ * @package Tgt Framework
+ * @author Tom Jenkins <tom@techguytom.com>
+ * @version 0.3
  */
 class MetaBoxArguments
 {

@@ -11,9 +11,9 @@ use Nerdery\Lib\MetaBox\MetaBoxArguments;
 /**
  * Meta Box
  *
- * @package WordPress
- * @author Tom Jenkins <tom@tgtdesign.com>
- * @version 1.0
+ * @package TGT Framework
+ * @author Tom Jenkins <tom@techguytom.com>
+ * @version 0.3
  */
 class MetaBoxWp extends MetaBoxArguments
 {

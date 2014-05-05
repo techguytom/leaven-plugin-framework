@@ -8,31 +8,28 @@
  * @subpackage Controllers
  */
 
-namespace Tgt\Controllers;
+namespace Nerdery\Controllers;
 
 /**
  * BaseController
  *
- * Parent controller for linking to the WordPress WP_Widget class and for 
- * handling view output functions
- *
- * @package  WordPress
- * @author Tom Jenkins <tom@tgtdesign.com>
+ * @package  TGT Framework
+ * @author Tom Jenkins <tom@techguytom.com>
  * @version 1.0 
  */
 class BaseController
 {
     /**
-     * _controllerName
+     * reflection
      *
-     * Holds the name of the current controller for file paths
+     * Holds instance of reflection class 
      *
-     * @var string
+     * @var object
      */
-    private $controllerName;
+    private $reflection;
 
     /**
-     * _path
+     * path
      *
      * Holds the current path
      *
@@ -46,10 +43,11 @@ class BaseController
      * @param string $controllerName Controller name
      * @return void
      */
-    public function __construct($controllerName, $path)
+    public function __construct($path)
     {
-        $this->controllerName = $controllerName;
-        $namespacePath = str_replace("\\Controllers", "/", __NAMESPACE__);
+        $this->reflection    = new \ReflectionClass(get_class($this));
+        $namespacePath = str_replace("\\Controllers", "/", $this->reflection->getNamespaceName());
+
         $this->path = $path . $namespacePath . "Views";
     }
 
@@ -62,7 +60,7 @@ class BaseController
      */
     public function getViewFolder()
     {
-        return $this->path . DIRECTORY_SEPARATOR . $this->controllerName;
+        return $this->path . DIRECTORY_SEPARATOR . $this->reflection->getShortName();
     }
 
     /**

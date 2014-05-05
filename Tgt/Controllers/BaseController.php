@@ -13,11 +13,8 @@ namespace Nerdery\Controllers;
 /**
  * BaseController
  *
- * Parent controller for linking to the WordPress WP_Widget class and for 
- * handling view output functions
- *
- * @package  WordPress
- * @author Tom Jenkins <tom@tgtdesign.com>
+ * @package  TGT Framework
+ * @author Tom Jenkins <tom@techguytom.com>
  * @version 1.0 
  */
 class BaseController

@@ -5,6 +5,13 @@
 
 namespace Nerdery\Lib\Registers;
 
+/**
+ * RegisterArguments
+ *
+ * @package TGT Framework
+ * @author Tom Jenkins <tom@techguytom.com>
+ * @version 0.3
+ */
 class RegisterArguments
 {
     /**

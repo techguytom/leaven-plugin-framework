@@ -9,8 +9,8 @@ namespace Nerdery\Lib\MetaBox;
  * MetaBox
  *
  * @package TGT Framework
- * @author Tom Jenkins <tjenkins@nerdery.com>
- * @version 0.8
+ * @author Tom Jenkins <tom@techguytom.com>
+ * @version 0.3
  */
 interface MetaBox
 {

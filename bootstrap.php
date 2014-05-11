@@ -10,13 +10,13 @@
 
 require_once 'LeavenPlugin.php';
 
-$tgtPlugin = new LeavenPlugin;
+$leavenPlugin = new LeavenPlugin;
 
-$tgtPlugin->setPath(realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
+$leavenPlugin->setPath(realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 
-spl_autoload_register(array($tgtPlugin, 'autoloader'));
+spl_autoload_register(array($leavenPlugin, 'autoloader'));
 
-register_activation_hook(__FILE__, array($tgtPlugin, 'pluginActivation'));
-register_deactivation_hook(__FILE__, array($tgtPlugin, 'pluginDeactivation'));
+register_activation_hook(__FILE__, array($leavenPlugin, 'pluginActivation'));
+register_deactivation_hook(__FILE__, array($leavenPlugin, 'pluginDeactivation'));
 
-$tgtPlugin->run();
+$leavenPlugin->run();

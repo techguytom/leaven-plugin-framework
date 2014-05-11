@@ -54,7 +54,7 @@ class LeavenPlugin
     public function run()
     {
         // Examples
-        //$scripts = new Controllers\LoginHeaderScriptsController('LoginHeaderScripts', $this->getPath());
+        //$scripts = new Leaven\Controllers\LoginHeaderScriptsController('LoginHeaderScripts', $this->getPath());
 
         //add_action('wp_enqueue_scripts', array($scripts, 'enqueueScripts'));
         //add_filter('genesis_do_nav', array($login, 'logInHeader'), 3, 10);

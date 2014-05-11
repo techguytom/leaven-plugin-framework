@@ -2,10 +2,10 @@
 /**
  * Meta Box Library File
  *
- * @package TGT_Framework
+ * @package Leaven_Framework
  * @subpackage Library
  */
-namespace Nerdery\Lib\MetaBox;
+namespace Leaven\Lib\MetaBox;
 
 /**
  * Meta Box Arguments

@@ -2,16 +2,16 @@
 /**
  * Meta Box Library File
  *
- * @package TGT_Framework
+ * @package Leaven_Framework
  * @subpackage Library
  */
-namespace Nerdery\Lib\MetaBox;
+namespace Leaven\Lib\MetaBox;
 
-use Nerdery\Lib\MetaBox\MetaBoxArguments;
+use Leaven\Lib\MetaBox\MetaBoxArguments;
 /**
  * Meta Box
  *
- * @package TGT Framework
+ * @package Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
  * @version 0.3
  */

@@ -4,16 +4,16 @@
  *
  * Provides view routing and render function
  *
- * @package TGT_Framework
+ * @package Leaven_Framework
  * @subpackage Controllers
  */
 
-namespace Nerdery\Controllers;
+namespace Leaven\Controllers;
 
 /**
  * BaseController
  *
- * @package  TGT Framework
+ * @package  Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
  * @version 1.0 
  */

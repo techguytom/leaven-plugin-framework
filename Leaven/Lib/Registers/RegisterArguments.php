@@ -3,12 +3,12 @@
  * RegisterArguments.php
  */
 
-namespace Nerdery\Lib\Registers;
+namespace Leaven\Lib\Registers;
 
 /**
  * RegisterArguments
  *
- * @package TGT Framework
+ * @package Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
  * @version 0.3
  */

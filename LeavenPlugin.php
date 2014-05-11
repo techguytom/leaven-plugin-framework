@@ -5,18 +5,16 @@
  *  @package WordPress
  */
 
-namespace Tgt;
-
 /**
- * TgtPlugin
+ * LeavenPlugin
  *
  * Staging class for Plugin
  *
  * @package WordPress
  * @author Tom Jenkins <tom@techguytom.com>
- * @version 0.2
+ * @version 0.4
  */
-class TgtPlugin
+class LeavenPlugin
 {
     /**
      * _path

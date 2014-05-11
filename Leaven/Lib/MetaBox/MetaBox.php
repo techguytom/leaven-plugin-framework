@@ -3,12 +3,12 @@
  * MetaBox.php
  */
 
-namespace Nerdery\Lib\MetaBox;
+namespace Leaven\Lib\MetaBox;
 
 /**
  * MetaBox
  *
- * @package TGT Framework
+ * @package Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
  * @version 0.3
  */

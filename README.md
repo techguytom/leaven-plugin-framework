@@ -17,12 +17,12 @@ components for WordPress plugin development.
    | -- | -- Controllers  
    | -- | -- | -- BaseController.php  
    | -- | -- Lib  
-   | -- | -- | -- Buddypress
+   | -- | -- | -- Buddypress  
    | -- | -- | -- MetaBox  
    | -- | -- | -- Registers  
    | -- | -- Views  
    | -- | -- | -- Assets  
-   | -- | -- | -- | -- MediaUploader
+   | -- | -- | -- | -- MediaUploader  
    | -- tests
 
 ###Files
@@ -83,7 +83,7 @@ within the admin.
 **tests**  
 Directory for holding PHPUnit tests
 
-ChangeLog:
+###ChangeLog:
 v0.5 - Added required files for generating tests for implementation and start  
 of BuddyPress implementation.
 

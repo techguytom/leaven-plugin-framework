@@ -12,15 +12,18 @@ components for WordPress plugin development.
 ###Structure
    | -- bootstrap.php  
    | -- LeavenPlugin.php  
+   | -- bin
    | -- Leaven  
    | -- | -- Controllers  
    | -- | -- | -- BaseController.php  
    | -- | -- Lib  
+   | -- | -- | -- Buddypress
    | -- | -- | -- MetaBox  
    | -- | -- | -- Registers  
    | -- | -- Views  
    | -- | -- | -- Assets  
    | -- | -- | -- | -- MediaUploader
+   | -- tests
 
 ###Files
 **bootstrap.php**  
@@ -30,6 +33,9 @@ instantiates the framework.
 **LeavenPlugin.php**  
 Class for controlling the activation, deactivation, and instantiation
 of plugin controllers and libraries.
+
+**bin**  
+Holds the bash script for setting up the test environment
 
 **Leaven/Controllers**  
 Directory for your plugin controllers.  
@@ -44,6 +50,10 @@ and utilization of WordPress Core components.
 *Items in this directory will eventually be available within separate
 repositories and will require their own factories. This will aid in the ability
 to have a more componentized structure.*
+
+**Leaven/Lib/Buddypress**  
+The BuddyPress library is incomplete, but presently returns data on all the  
+groups registered.  
 
 **Leaven/Lib/MetaBox**  
 The MetaBox library aids in the creation of WordPress MetaBoxes. The directory
@@ -70,5 +80,11 @@ Directory for holding css and javascript files associated with the views.
 An asset library for controlling the WordPress Media Upload functionality
 within the admin.
 
+**tests**  
+Directory for holding PHPUnit tests
+
+ChangeLog:
+v0.5 - Added required files for generating tests for implementation and start  
+of BuddyPress implementation.
 
 [1]: http://codex.wordpress.org/Writing_a_Plugin#File_Headers

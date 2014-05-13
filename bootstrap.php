@@ -3,7 +3,7 @@
  * Plugin Name: Leaven Plugin Framework
  * Plugin URI: http://techguytom.com
  * Description: Base files for WordPress Plugin Framework
- * Version: 0.4
+ * Version: 0.5
  * Author: Tom Jenkins <tom@techguytom.com>
  * Author URI: http://techguytom.com
  */

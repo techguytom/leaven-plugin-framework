@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * GroupData.php
  */
 
 namespace Leaven\Lib\Buddypress;

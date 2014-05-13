@@ -7,6 +7,14 @@ namespace Leaven\Lib\Registers;
 
 use Leaven\Lib\Support\WpOptionsBuilder;
 
+/**
+ * RegisterArguments
+ *
+ * @uses WpOptionsBuilder
+ * @package Leaven Framework
+ * @author Tom Jenkins <tom@techguytom.com>
+ * @version $Id$
+ */
 class RegisterArguments extends WpOptionsBuilder
 {
     /**

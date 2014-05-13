@@ -8,6 +8,7 @@
 namespace Leaven\Lib\MetaBox;
 
 use Leaven\Lib\MetaBox\MetaBoxArguments;
+
 /**
  * Meta Box
  *

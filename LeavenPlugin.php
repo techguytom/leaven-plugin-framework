@@ -12,7 +12,7 @@
  *
  * @package WordPress
  * @author Tom Jenkins <tom@techguytom.com>
- * @version 0.4
+ * @version 0.5
  */
 class LeavenPlugin
 {

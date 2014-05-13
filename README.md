@@ -12,6 +12,7 @@ components for WordPress plugin development.
 ###Structure
    | -- bootstrap.php  
    | -- LeavenPlugin.php  
+   | -- bin
    | -- Leaven  
    | -- | -- Controllers  
    | -- | -- | -- BaseController.php  
@@ -22,6 +23,7 @@ components for WordPress plugin development.
    | -- | -- Views  
    | -- | -- | -- Assets  
    | -- | -- | -- | -- MediaUploader
+   | -- tests
 
 ###Files
 **bootstrap.php**  
@@ -31,6 +33,9 @@ instantiates the framework.
 **LeavenPlugin.php**  
 Class for controlling the activation, deactivation, and instantiation
 of plugin controllers and libraries.
+
+**bin**  
+Holds the bash script for setting up the test environment
 
 **Leaven/Controllers**  
 Directory for your plugin controllers.  
@@ -74,6 +79,9 @@ Directory for holding css and javascript files associated with the views.
 **Leaven/Views/Assets/MediaUploader**  
 An asset library for controlling the WordPress Media Upload functionality
 within the admin.
+
+**tests**  
+Directory for holding PHPUnit tests
 
 ChangeLog:
 v0.5 - Added required files for generating tests for implementation and start  

@@ -17,7 +17,7 @@ components for WordPress plugin development.
    | -- | -- Controllers  
    | -- | -- | -- BaseController.php  
    | -- | -- Lib  
-   | -- | -- | -- Buddypress
+   | -- | -- | -- Buddypress  
    | -- | -- | -- MetaBox  
    | -- | -- | -- Registers  
    | -- | -- Views  

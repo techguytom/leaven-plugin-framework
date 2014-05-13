@@ -5,84 +5,24 @@
 
 namespace Leaven\Lib\Registers;
 
+use Leaven\Lib\Support\WpOptionsBuilder;
+
 /**
  * RegisterArguments
  *
+ * @uses WpOptionsBuilder
  * @package Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
- * @version 0.3
+ * @version $Id$
  */
-class RegisterArguments
+class RegisterArguments extends WpOptionsBuilder
 {
-    /**
-     * labelWordPressConversionArray
-     *
-     * Key conversion array for WordPress
-     *
-     * @var array
-     */
-    private $labelWordPressConversionArray = array(
-        'name'                    => 'name',
-        'singularName'            => 'singular_name',
-        'menuName'                => 'menu_name',
-        'nameAdminBar'            => 'name_admin_bar',
-        'allItems'                => 'all_items',
-        'addNew'                  => 'add_new',
-        'addNewItem'              => 'add_new_item',
-        'editItem'                => 'edit_item',
-        'updateItem'              => 'update_item',
-        'newItem'                 => 'new_item',
-        'newItemName'             => 'new_item_name',
-        'viewItem'                => 'view_item',
-        'searchItems'             => 'search_items',
-        'popularItems'            => 'popular_items',
-        'separateItemsWithCommas' => 'separate_items_with_commas',
-        'addOrRemoveItems'        => 'add_or_remove_items',
-        'chooseFromMostUsed'      => 'choose_from_most_used',
-        'notFound'                => 'not_found',
-        'notFoundInTrash'         => 'not_found_in_trash',
-        'parentItemColon'         => 'parent_item_colon',
-    );
-
-    /**
-     * optionsWordPressConversionArray
-     *
-     * Key conversion array for WordPress
-     *
-     * @var array
-     */
-    private $optionsWordPressConversionArray = array(
-        'description'       => 'description',
-        'public'            => 'public',
-        'excludeFromSearch' => 'exclude_from_search',
-        'publiclyQueryable' => 'publicly_queryable',
-        'showUi'            => 'show_ui',
-        'showInNavMenus'    => 'show_in_nav_menus',
-        'showInMenu'        => 'show_in_menu',
-        'showInAdminBar'    => 'show_in_admin_bar',
-        'showTagcloud'      => 'show_tagcloud',
-        'showAdminColumn'   => 'show_admin_column',
-        'menuPosition'      => 'menu_position',
-        'menuIcon'          => 'menu_icon',
-        'capabilityType'    => 'capability_type',
-        'capabilities'      => 'capabilities',
-        'mapMetaCap'        => 'map_meta_cap',
-        'hierarchical'      => 'hierarchical',
-        'supports'          => 'supports',
-        'taxonomies'        => 'taxonomies',
-        'hasArchive'        => 'has_archive',
-        'permalinkEpmask'   => 'permalink_epmask',
-        'rewrite'           => 'rewrite',
-        'queryVar'          => 'query_var',
-       'canExport'          => 'can_export',
-    );
-
     /**
      * postType
      *
      * @var mixed
      */
-    private $postType;
+    protected $postType;
 
     /**
      * name
@@ -92,7 +32,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $name;
+    protected $name;
 
     /**
      * singularName
@@ -101,7 +41,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $singularName;
+    protected $singularName;
 
     /**
      * menuName
@@ -111,7 +51,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $menuName;
+    protected $menuName;
 
     /**
      * nameAdminBar
@@ -121,7 +61,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $nameAdminBar;
+    protected $nameAdminBar;
 
     /**
      * allItems
@@ -130,7 +70,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $allItems;
+    protected $allItems;
 
     /**
      * addNew
@@ -142,7 +82,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $addNew;
+    protected $addNew;
 
     /**
      * addNewItem
@@ -151,7 +91,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $addNewItem;
+    protected $addNewItem;
 
     /**
      * editItem
@@ -160,7 +100,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $editItem;
+    protected $editItem;
 
     /**
      * newItem
@@ -169,7 +109,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $newItem;
+    protected $newItem;
 
     /**
      * newItemName
@@ -178,7 +118,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $newItemName;
+    protected $newItemName;
 
     /**
      * viewItem
@@ -187,7 +127,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $viewItem;
+    protected $viewItem;
 
     /**
      * updateItem
@@ -196,7 +136,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $updateItem;
+    protected $updateItem;
 
     /**
      * searchItems
@@ -205,7 +145,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $searchItems;
+    protected $searchItems;
 
     /**
      * popularItems
@@ -214,7 +154,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $popularItems;
+    protected $popularItems;
 
     /**
      * separateItemsWithCommas
@@ -223,7 +163,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $separateItemsWithCommas;
+    protected $separateItemsWithCommas;
 
     /**
      * addOrRemoveItems
@@ -233,7 +173,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $addOrRemoveItems;
+    protected $addOrRemoveItems;
 
     /**
      * chooseFromMostUsed
@@ -243,7 +183,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $chooseFromMostUsed;
+    protected $chooseFromMostUsed;
 
     /**
      * notFound
@@ -252,7 +192,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $notFound;
+    protected $notFound;
 
     /**
      * notFoundInTrash
@@ -262,7 +202,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $notFoundInTrash;
+    protected $notFoundInTrash;
 
     /**
      * parentItemColon
@@ -272,7 +212,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $parentItemColon;
+    protected $parentItemColon;
 
     /**
      * description
@@ -282,7 +222,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $description;
+    protected $description;
 
     /**
      * public
@@ -293,7 +233,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $public;
+    protected $public;
 
     /**
      * excludeFromSearch
@@ -304,7 +244,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $excludeFromSearch;
+    protected $excludeFromSearch;
 
     /**
      * publiclyQueryable
@@ -315,7 +255,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $publiclyQueryable;
+    protected $publiclyQueryable;
 
     /**
      * showUi
@@ -326,7 +266,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showUi;
+    protected $showUi;
 
     /**
      * showInNavMenus
@@ -337,7 +277,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showInNavMenus;
+    protected $showInNavMenus;
 
     /**
      * showTagcloud
@@ -347,7 +287,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showTagcloud;
+    protected $showTagcloud;
 
     /**
      * showAdminColumn
@@ -358,7 +298,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showAdminColumn;
+    protected $showAdminColumn;
 
     /**
      * showInMenu
@@ -369,7 +309,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showInMenu;
+    protected $showInMenu;
 
     /**
      * showInAdminBar
@@ -380,7 +320,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $showInAdminBar;
+    protected $showInAdminBar;
 
     /**
      * menuPosition
@@ -391,7 +331,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $menuPosition;
+    protected $menuPosition;
 
     /**
      * menuIcon
@@ -402,7 +342,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $menuIcon;
+    protected $menuIcon;
 
     /**
      * capabilityType
@@ -412,7 +352,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $capabilityType;
+    protected $capabilityType;
 
     /**
      * capabilities
@@ -422,7 +362,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $capabilities;
+    protected $capabilities;
 
     /**
      * mapMetaCap
@@ -433,7 +373,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $mapMetaCap;
+    protected $mapMetaCap;
 
     /**
      * hierarchical
@@ -445,7 +385,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $hierarchical;
+    protected $hierarchical;
 
     /**
      * supports
@@ -457,7 +397,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $supports;
+    protected $supports;
 
     /**
      * taxonomies
@@ -467,7 +407,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $taxonomies;
+    protected $taxonomies;
 
     /**
      * hasArchive
@@ -478,7 +418,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $hasArchive;
+    protected $hasArchive;
 
     /**
      * permalinkEpmask
@@ -490,7 +430,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $permalinkEpmask;
+    protected $permalinkEpmask;
 
     /**
      * rewrite
@@ -501,7 +441,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $rewrite;
+    protected $rewrite;
 
     /**
      * queryVar
@@ -512,7 +452,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $queryVar;
+    protected $queryVar;
 
     /**
      * canExport
@@ -522,7 +462,7 @@ class RegisterArguments
      *
      * @var mixed
      */
-    private $canExport;
+    protected $canExport;
 
     /**
      * Get postType.
@@ -1300,7 +1240,7 @@ class RegisterArguments
      */
     public function setHasArchive($hasArchive)
     {
-        $this->has_archive = $hasArchive;
+        $this->hasArchive = $hasArchive;
     }
 
     /**
@@ -1401,43 +1341,5 @@ class RegisterArguments
     public function setUpdateItem($updateItem)
     {
         $this->updateItem = $updateItem;
-    }
-
-    /**
-     * Arguments
-     *
-     * Build the array in the format WordPress likes for the post type
-     * creation.
-     *
-     * @return void
-     */
-    public function Arguments()
-    {
-        $labels  = array('labels' => $this->buildReturnArray($this->labelWordPressConversionArray));
-        $options = $this->buildReturnArray($this->optionsWordPressConversionArray);
-
-        return array_merge($labels, $options);
-    }
-
-    /**
-     * buildReturnArray
-     *
-     * Gather the set variables into a return array.
-     *
-     * @param mixed $buildArray
-     * @return void
-     */
-    public function buildReturnArray($buildArray)
-    {
-        $returnArray = array();
-
-        foreach ($buildArray as $key => $value) {
-            if (!isset($this->$key)) {
-                continue;
-            }
-            $returnArray[$buildArray[$key]] = $this->$key;
-        }
-
-        return $returnArray;
     }
 }

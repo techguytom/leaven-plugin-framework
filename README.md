@@ -16,6 +16,7 @@ components for WordPress plugin development.
    | -- | -- Controllers  
    | -- | -- | -- BaseController.php  
    | -- | -- Lib  
+   | -- | -- | -- Buddypress
    | -- | -- | -- MetaBox  
    | -- | -- | -- Registers  
    | -- | -- Views  
@@ -45,6 +46,10 @@ and utilization of WordPress Core components.
 repositories and will require their own factories. This will aid in the ability
 to have a more componentized structure.*
 
+**Leaven/Lib/Buddypress**  
+The BuddyPress library is incomplete, but presently returns data on all the  
+groups registered.  
+
 **Leaven/Lib/MetaBox**  
 The MetaBox library aids in the creation of WordPress MetaBoxes. The directory
 includes:
@@ -70,5 +75,8 @@ Directory for holding css and javascript files associated with the views.
 An asset library for controlling the WordPress Media Upload functionality
 within the admin.
 
+ChangeLog:
+v0.5 - Added required files for generating tests for implementation and start  
+of BuddyPress implementation.
 
 [1]: http://codex.wordpress.org/Writing_a_Plugin#File_Headers

@@ -10,7 +10,7 @@ namespace Leaven\Lib\Registers;
  *
  * @package Leaven Framework
  * @author Tom Jenkins <tom@techguytom.com>
- * @version 0.3
+ * @version 0.8
  */
 interface Register
 {
